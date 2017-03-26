@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e4eba6cc-0bd8-4cac-8919-388757ec84e5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/muic/webapp/Initializers/UserInitializer.java" afterPath="$PROJECT_DIR$/src/main/java/io/muic/webapp/Initializers/UserInitializer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/muic/webapp/api/service/AchievementService.java" afterPath="$PROJECT_DIR$/src/main/java/io/muic/webapp/api/service/AchievementService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/muic/webapp/controller/HelperController.java" afterPath="$PROJECT_DIR$/src/main/java/io/muic/webapp/controller/HelperController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/muic/webapp/controller/MagicController.java" afterPath="$PROJECT_DIR$/src/main/java/io/muic/webapp/controller/MagicController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/muic/webapp/controller/WeaponController.java" afterPath="$PROJECT_DIR$/src/main/java/io/muic/webapp/controller/WeaponController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/muic/webapp/api/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/io/muic/webapp/api/service/UserService.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -60,11 +57,21 @@
       <file leaf-file-name="UserInitializer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/muic/webapp/Initializers/UserInitializer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+            <state relative-caret-position="390">
+              <caret line="35" column="28" lean-forward="false" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/muic/webapp/api/service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="149">
+              <caret line="36" column="10" lean-forward="false" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -135,7 +142,6 @@
         <option value="$PROJECT_DIR$/src/main/java/io/muic/webapp/api/configuration/AuthenticationConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/muic/webapp/api/configuration/WebSecurityConfiguration.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/io/muic/webapp/api/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/muic/webapp/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/muic/webapp/controller/GameController.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/muic/webapp/controller/AchievementController.java" />
@@ -143,6 +149,7 @@
         <option value="$PROJECT_DIR$/src/main/java/io/muic/webapp/controller/WeaponController.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/muic/webapp/controller/MagicController.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/muic/webapp/controller/HelperController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/muic/webapp/api/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/muic/webapp/Initializers/UserInitializer.java" />
       </list>
     </option>
@@ -895,12 +902,12 @@
       <option name="presentableId" value="Default" />
       <updated>1490518820167</updated>
       <workItem from="1490518823793" duration="14453000" />
-      <workItem from="1490546535273" duration="11497000" />
+      <workItem from="1490546535273" duration="11798000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25950000" />
+    <option name="totallyTimeSpent" value="26251000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="708" extended-state="6" />
@@ -1302,14 +1309,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/muic/webapp/api/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="45" column="21" lean-forward="false" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/muic/webapp/controller/AchievementController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1397,10 +1396,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/muic/webapp/api/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="36" column="10" lean-forward="false" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/muic/webapp/Initializers/UserInitializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+        <state relative-caret-position="390">
+          <caret line="35" column="28" lean-forward="false" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

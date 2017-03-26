@@ -34,7 +34,7 @@ public class UserService {
         return userRepository.findOne(id);
     }
 
-    private User save(User user) {
+    public User save(User user) {
         return userRepository.save(user);
     }
 
