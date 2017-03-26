@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -19,6 +20,14 @@ import java.util.Map;
 public class HelperController {
     @Autowired
     private HelperService helperService;
+
+    @RequestMapping(value = {"/", ""}, method = RequestMethod.GET)
+    public Map getHelpers() {
+        HashMap<String, Object> frb = new HashMap<>();
+        List<Helper> users = helperService.findAll();
+        frb.put(Helper.PLURAL, users);
+        return frb;
+    }
 
     @RequestMapping(value = {"/", ""}, method = RequestMethod.POST)
     public Map createHelper(@RequestParam(required = false) String name, @RequestParam(required = false) Long damage,

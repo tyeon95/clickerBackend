@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -17,6 +18,14 @@ import java.util.Map;
 public class WeaponController {
     @Autowired
     private WeaponService weaponService;
+
+    @RequestMapping(value = {"/", ""}, method = RequestMethod.GET)
+    public Map getWeapons() {
+        HashMap<String, Object> frb = new HashMap<>();
+        List<Weapon> users = weaponService.findAll();
+        frb.put(Weapon.PLURAL, users);
+        return frb;
+    }
 
     @RequestMapping(value = {"/", ""}, method = RequestMethod.POST)
     public Map createWeapon(@RequestParam(required = false) String name, @RequestParam(required = false) Long damage,

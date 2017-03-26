@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -17,6 +18,14 @@ import java.util.Map;
 public class MagicController {
     @Autowired
     private MagicService magicService;
+
+    @RequestMapping(value = {"/", ""}, method = RequestMethod.GET)
+    public Map getMagics() {
+        HashMap<String, Object> frb = new HashMap<>();
+        List<Magic> users = magicService.findAll();
+        frb.put(Magic.PLURAL, users);
+        return frb;
+    }
 
     @RequestMapping(value = {"/", ""}, method = RequestMethod.POST)
     public Map createMagic(@RequestParam(required = false) String name, @RequestParam(required = false) Long damage,

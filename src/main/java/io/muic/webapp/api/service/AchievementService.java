@@ -31,7 +31,7 @@ public class AchievementService {
 
     public Achievement create(String name) {
         Achievement achievement = new Achievement();
-        if (achievementRepository.findByName(name) != null) {
+        if (achievementRepository.findByName(name) == null) {
             achievement.setName(name);
             achievement = save(achievement);
         }

@@ -14,5 +14,6 @@ public class UserInitializer {
 
     public void populateDatabase() {
         userService.create("wony_95@hotmail.com", "1234");
+        
     }
 }
