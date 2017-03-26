@@ -48,6 +48,10 @@ public class UserService {
         return user;
     }
 
+    public boolean authenticate(String username, String password) {
+        return true;
+    }
+
     public User addAchievement(long id, Long achievementId) {
         User user = findOne(id);
         Achievement achievement = (achievementId != null) ? achievementRepository.findOne(achievementId) : null;
