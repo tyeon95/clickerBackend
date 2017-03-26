@@ -12,6 +12,7 @@ import java.util.Map;
 /**
  * Created by tyeon on 3/26/17.
  */
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping(value = "/"+ Game.PLURAL)
 public class GameController {

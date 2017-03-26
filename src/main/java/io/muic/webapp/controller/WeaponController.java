@@ -3,10 +3,7 @@ package io.muic.webapp.controller;
 import io.muic.webapp.api.entity.Weapon;
 import io.muic.webapp.api.service.WeaponService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,6 +11,7 @@ import java.util.Map;
 /**
  * Created by tyeon on 3/26/17.
  */
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping(value = "/"+ Weapon.PLURAL)
 public class WeaponController {

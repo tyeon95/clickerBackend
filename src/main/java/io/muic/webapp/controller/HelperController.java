@@ -13,6 +13,7 @@ import java.util.Map;
 /**
  * Created by tyeon on 3/26/17.
  */
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping(value = "/"+ Helper.PLURAL)
 public class HelperController {

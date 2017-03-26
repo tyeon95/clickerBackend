@@ -38,6 +38,14 @@ public class UserService {
         return userRepository.save(user);
     }
 
+    public boolean login(String email, String password) {
+        User user = userRepository.findByEmail(email);
+        if (user != null) {
+            if (user.getPassword().equals(password)) return true;
+        }
+        return false;
+    }
+
     public User create(String email, String password) {
         User user = new User();
         if (userRepository.findByEmail(email) == null) {

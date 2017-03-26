@@ -35,8 +35,17 @@ public class UserController {
         return frb;
     }
 
+    @RequestMapping(value = {"/login/", "/login"}, method = RequestMethod.POST)
+    public Map getUser(@RequestParam(required = false) String email, @RequestParam(required = false) String password) {
+        HashMap<String, Object> frb = new HashMap<>();
+        frb.put(User.SINGULAR, userService.login(email, password));
+        return frb;
+    }
+
     @RequestMapping(value = {"/", ""}, method = RequestMethod.POST)
     public Map createUser(@RequestParam(required = false) String email, @RequestParam(required = false) String password) {
+        System.out.println(email);
+        System.out.println(password);
         HashMap<String, Object> frb = new HashMap<>();
         User user = userService.create(email, password);
         frb.put(User.SINGULAR, user);
