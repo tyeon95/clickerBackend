@@ -8,7 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -38,12 +40,16 @@ public class UserService {
         return userRepository.save(user);
     }
 
-    public boolean login(String email, String password) {
+    public Map login(String email, String password) {
+        Map frb = new HashMap();
         User user = userRepository.findByEmail(email);
+        boolean login = false;
         if (user != null) {
-            if (user.getPassword().equals(password)) return true;
+            if (user.getPassword().equals(password)) login = true;
         }
-        return false;
+        frb.put("success", login);
+        frb.put(User.SINGULAR, user);
+        return frb;
     }
 
     public User create(String email, String password) {

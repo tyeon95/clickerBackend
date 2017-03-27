@@ -54,7 +54,7 @@ public class GameController {
         return frb;
     }
 
-    @RequestMapping(value = {"/{id}/stats/", "/{id}/stats"}, method = RequestMethod.POST)
+    @RequestMapping(value = {"/{id}/stats/", "/{id}/stats"}, method = RequestMethod.GET)
     public Map getStats(@PathVariable long id) {
         HashMap<String, Object> frb = new HashMap<>();
         frb.put(Game.SINGULAR, gameService.getStats(id));
